@@ -31,7 +31,8 @@ export const Setup: FC<SetupProps> = ({
         // Check if newPlayerName is blank or already exists.
         if (
             newPlayerName.length == 0
-            || chosenPlayers.some(x => 0 == x.name.localeCompare(newPlayerName))
+            //|| chosenPlayers.some(x => 0 == x.name.localeCompare(newPlayerName))
+            || chosenPlayers.some(x => 0 == x.name.localeCompare(newPlayerName, 'en', { sensitivity: 'base' }))
         )
             return;
 
