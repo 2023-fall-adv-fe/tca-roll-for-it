@@ -41,22 +41,6 @@ export const Home: React.FC<HomeProps> = ({
 
 	const nav = useNavigate();
 
-	// Only for my one 'real' first game played with the app
-	// if I decide to preserve the data for posterity ? ? ?
-	const isWinningSequenceLessThanForty = (sequence: string): boolean => {
-
-		const total = sequence
-			.split(" + ")
-			.map(x => Number(x))
-			.reduce(
-				(acc, x) => acc + x
-				, 0
-			)
-		;
-
-		return total < 40;
-	}; 
-
 	return (
 		<div
 			className=""
@@ -257,9 +241,6 @@ export const Home: React.FC<HomeProps> = ({
 												>
 													<td className="whitespace-pre-wrap">
 														{x.winningSequence}
-														{ 
-															isWinningSequenceLessThanForty(x.winningSequence) && <sup> *</sup>
-														}
 													</td>
 													<td>{x.wins}</td>
 												</tr>
