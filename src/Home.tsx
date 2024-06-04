@@ -246,7 +246,7 @@ export const Home: React.FC<HomeProps> = ({
 									<table className="table w-full mt-3">
 										<thead>
 											<tr>
-												<th>SEQUENCE</th>
+												<th>CARD VALUE (COUNT)</th>
 												<th># TIMES</th>
 											</tr>
 										</thead>

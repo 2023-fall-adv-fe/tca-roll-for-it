@@ -189,6 +189,7 @@ export const getWinningSequenceData = (results: GameResult[]) => {
 			.filter(y => y.name == x.winner)
 			.flatMap(y => y.cardsScored)
 			.map(y => y.points)
+			.sort((a, b) => b - a)
 			.join(" + ")
 	);
 
